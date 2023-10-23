@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Affaticati Lucas 6T</title>
+  <link rel="stylesheet" href="css/style.css">
+    
+</head>  
+<body>
+  <header id="header">
+    <h1>Affaticati Lucas 6T</h1>
+
+     
+     <body>
+     <button><a href="html/ProyectoSaccone/ProyectoSaccone.html">Ingresar</a></button>
+
+
+     <!DOCTYPE html>
+     <html>
+     <head>
+         <title>Caja de Comentarios</title>
+     </head>
+     <body>
+         <h1>Comentarios</h1>
+     
+         <!-- Formulario para agregar comentarios -->
+         <form id="comment-form">
+             <label for="name">Nombre:</label>
+             <input type="text" id="name" required><br>
+             <label for="comment">Comentario:</label>
+             <textarea id="comment" required></textarea><br>
+             <button type="submit">Agregar Comentario</button>
+         </form>
+     
+         <!-- Lista de comentarios -->
+         <div id="comment-list">
+             <!-- Los comentarios se mostrarán aquí -->
+         </div>
+     
+         <script>
+             // Función para agregar un comentario
+             document.getElementById("comment-form").addEventListener("submit", function(event) {
+                 event.preventDefault();
+     
+                 // Obtener los valores del nombre y el comentario
+                 const name = document.getElementById("name").value;
+                 const comment = document.getElementById("comment").value;
+     
+                 // Crear un elemento de comentario
+                 const commentElement = document.createElement("div");
+                 commentElement.innerHTML = `<strong>${name}:</strong> ${comment}`;
+     
+                 // Agregar el comentario a la lista de comentarios
+                 document.getElementById("comment-list").appendChild(commentElement);
+     
+                 // Limpiar los campos del formulario
+                 document.getElementById("name").value = "";
+                 document.getElementById("comment").value = "";
+             });
+         </script>
+     </body>
+     </html>
+     
